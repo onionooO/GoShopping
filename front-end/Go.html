@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Go物</title>
+	<link rel="stylesheet" type="text/css" href="http://g.alicdn.com/sj/dpl/1.5.1/css/sui.min.css">
+	<link rel="stylesheet" type="text/css" href="http://g.alicdn.com/sj/dpl/1.5.1/css/sui-append.css">
+	<link rel="stylesheet" type="text/css" href="resources/css/Go.css">
+	<script type="text/javascript" src="resources/js/jquery-3.1.1.min.js"></script>
+	<script type="text/javascript" src="http://g.alicdn.com/sj/dpl/1.5.1/js/sui.min.js"></script>
+	<script type="text/javascript" src="resources/js/Go.js"></script>
+</head>
+<body>
+	<div id="header">
+		<div class="logo">
+			<p>Go</p>
+		</div>
+	</div>
+	<div id="content">
+		<!-- 商品展示  幻灯片形式 -->
+		<div class="pro_show">
+			<div id="myCarousel" data-ride="carousel" data-interval="4000" class="sui-carousel slide">
+				<ol class="carousel-indicators">
+					<li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+					<li data-target="#myCarousel" data-slide-to="1"></li>
+					<li data-target="#myCarousel" data-slide-to="2"></li>
+					<li data-target="#myCarousel" data-slide-to="3"></li>
+				</ol>
+				<div class="carousel-inner">
+					<div class="active item"><img src="resources/Images/1.jpg">
+						<div class="carousel-caption">
+							<h4>标题</h4>
+							<p>内容内容内容内容内容内容内容内容内容内容内容内容</p>
+						</div>
+					</div>
+					<div class="item"><img src="resources/Images/2.jpg">
+						<div class="carousel-caption">
+							<h4>标题</h4>
+							<p>内容内容内容内容内容内容内容内容内容内容内容内容</p>
+						</div>
+					</div>
+					<div class="item"><img src="resources/Images/3.jpg">
+						<div class="carousel-caption">
+							<h4>标题</h4>
+							<p>内容内容内容内容内容内容内容内容内容内容内容内容</p>
+						</div>
+					</div>
+					<div class="item"><img src="resources/Images/4.jpg">
+						<div class="carousel-caption">
+							<h4>标题</h4>
+							<p>内容内容内容内容内容内容内容内容内容内容内容内容</p>
+						</div>
+					</div>
+				</div>
+				<!-- <a href="#myCarousel" data-slide="prev" class="carousel-control left">‹</a> -->
+				<!-- <a href="#myCarousel" data-slide="next" class="carousel-control right">›</a> -->
+			</div>
+		</div>
+		
+	</div>
+	<!-- 导航栏部分。分为登录之前、登录之后、以及固定导航栏三部分 -->
+	<!-- "#nav1"分为登录前后两部分 -->
+	<div id="nav1">
+		<div class="logo">
+			<p>Go&nbsp;物</p>
+		</div>
+		<!-- 登录前 -->
+		<div class="sign">
+			<a id="signinbtn">登录</a>
+			<a id="signupbtn">注册</a>
+		</div>
+		<!-- 登录后 -->
+		<div class="sel">
+			<div class="after_signin">
+				<p>快来购你所爱</p>
+				<img src="">
+				<div class="search">
+					<input type="text" name="search">
+					<button type="button" class="sui-btn btn-primary searchbtn">搜索</button>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div id="nav2">
+		
+	</div>
+	<!-- 登录注册页面 -->
+	<div id="signBox">
+		<ul class="tab sui-nav nav-tabs">
+			<li class="signin active"><a href="#signin" data-toggle="tab" style="border-top-left-radius:16px;"><span>登录</span></a></li>
+			<li class="signup"><a href="#signup" data-toggle="tab" style="border-top-right-radius:16px;"><span>注册</span></a></li>
+		</ul>
+		<div class="tab-content">
+			<div id="signin" class="tab-pane active">
+				<form class="sui-form form-horizontal">
+					<div class="control-group">
+						<label for="inputEmail" class="control-label">用户名：</label>
+						<div class="controls">
+							<input type="text" id="inputUsername" placeholder="Username">
+						</div>
+					</div>
+					<div class="control-group">
+						<label for="inputPassword" class="control-label">密码：</label>
+						<div class="controls">
+							<input type="password" id="inputPassword" placeholder="Password">
+						</div>
+					</div>
+					<div class="control-group">
+						<label class="control-label"></label>
+						<div class="controls">
+							<label data-toggle="checkbox" class="checkbox-pretty inline">
+								<input type="checkbox" name="remember-me"><span>记住我</span>
+							</label>
+						</div>
+					</div>
+					<div class="control-group">
+						<label class="control-label"></label>
+						<div class="controls">
+							<button type="button" class="sui-btn btn-primary submit">登录</button>
+							<button type="button" class="sui-btn btn-primary button">取消</button>
+						</div>
+					</div>
+				</form>
+				<p>还没有账号？点击<a class="clickhere">这里</a>注册</p>
+			</div>
+			<div id="signup" class="tab-pane">
+				<form class="sui-form form-horizontal">
+					<div class="control-group">
+						<label for="inputEmail" class="control-label">用户名：</label>
+						<div class="controls">
+							<input type="text" id="inputUsername" placeholder="Username">
+						</div>
+					</div>
+					<div class="control-group">
+						<label for="inputPassword" class="control-label">密码：</label>
+						<div class="controls">
+							<input type="password" id="inputPassword" placeholder="Password">
+						</div>
+					</div>
+					<div class="control-group">
+						<label class="control-label"></label>
+						<div class="controls">
+							<button type="button" class="sui-btn btn-primary">注册</button>
+							<button type="button" class="sui-btn btn-primary button">取消</button>
+						</div>
+					</div>
+				</form>
+			</div>
+		</div>
+	</div>
+	
+</body>
+</html>

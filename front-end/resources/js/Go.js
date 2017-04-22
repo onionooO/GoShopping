@@ -32,10 +32,12 @@ window.onload = function () {
             var password = $('#inputPassword').val();
             var data = {
                 username: username,
-                password: password
+                password: password,
+                service:  'userService',
+                method:   'login'
             }
             $.ajax({
-                url:      '/login',
+                url:      '/shoppingSystem/FrontController',
                 type:     'post',
                 data:     data,
                 dataType: 'json',
@@ -77,7 +79,7 @@ window.onload = function () {
                 password: password
             }
             $.ajax({
-                url:      '/register',
+                url:      '/shoppingSystem/FrontController',
                 type:     'post',
                 data:     data,
                 dataType: 'json',

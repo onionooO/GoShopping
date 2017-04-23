@@ -2,7 +2,9 @@ window.onload = function () {
 	var bodyW = document.getElementsByTagName('body')[0].offsetWidth;
     $('#signBox').css('margin-left', (bodyW-354)/2 + 'px');
     var contentH = document.getElementById('content').offsetHeight;
+    // console.log(contentH);
     $('#footer').css('margin-top', contentH);
+
     $(function(){
         // 登录前 点击“登录”按钮
         $('.sign #signinbtn').on('click', function(){
@@ -48,7 +50,7 @@ window.onload = function () {
                         $('#nav .sel').css('display','block');
                         $('#signBox').css('display','none');
                         $('#content .showPro').css('display', 'block');
-                        var contentH = document.getElementById('content').offsetHeight;
+                        var contentH = document.getElementById('content').offsetHeight + 80;
                         $('#footer').css('margin-top', contentH);
                     }
                     else if(result.status === 0){
@@ -65,7 +67,8 @@ window.onload = function () {
                     $('#nav .sel').css('display','block');
                     $('#signBox').css('display','none');
                     $('#content .showPro').css('display', 'block');
-                    var contentH = document.getElementById('content').offsetHeight;
+                    var contentH = document.getElementById('content').offsetHeight + 80;
+                    // console.log(contentH);
                     $('#footer').css('margin-top', contentH);
                 }
             })

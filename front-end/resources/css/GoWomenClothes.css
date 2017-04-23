@@ -1,0 +1,75 @@
+body{
+	margin: 0;
+	padding: 0;
+	width: 100%;
+	height: 100%;
+	font-size: 1em;
+	line-height: normal;
+	background-color: #FAFAFA;
+	background-image: url(../Images/bg.png); 
+	font-family: "微软雅黑","Comic Sans MS","幼圆","黑体",sans-serif;
+}
+#header .logo{
+	width: 80px;
+	margin: 13px 40px;
+	height: auto;
+	border-right: 1px solid #8E32F8;
+}
+#header p{
+	margin: 0;
+	text-align: center;
+	font-size: 35px;
+	color: #8E32F8;
+}
+#top{
+	margin-top: 20px;
+	width: 100%;
+	height: auto;
+	background-color: white;
+}
+#top .logo{
+	width: 300px;
+	color: #8E32F8;
+	padding-top: 40px;
+	margin: 0 0 0 80px;
+	float: left;
+}
+#top .logo p{
+	margin: 0;
+	text-align: center;
+	font-size: 40px;
+	font-family: "微软雅黑","Comic Sans MS","幼圆","黑体",sans-serif;
+}
+#top .search{
+	margin: 0 auto;
+	width: 440px;
+	height: auto;
+	padding: 50px 0;
+}
+#top .search input{
+	width: 300px;
+	height: 25px;
+	border-radius: 16px;
+	padding-left: 10px;
+	outline: none;
+}
+.sui-btn{
+	font-size: 1em;
+	height: 35px;
+	border: 1px solid #8E32F8;
+	border-radius: 20px;
+	color: #8E32F8;
+	background-color: white;
+}
+.sui-btn:hover{
+	border: 1px solid #8E32F8;
+	color: #8E32F8;
+	background-color: #FAFAFA;
+}
+.sui-btn.button{
+	margin-left: 34px;
+}
+#top button.searchbtn{
+	margin-left: 35px;
+	width: 80px;
+}

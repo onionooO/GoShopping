@@ -114,7 +114,7 @@ window.onload = function () {
                 dataType: 'json',
                 data:     data,
                 success: function(result){
-                    window.location.href="";    //转至该类商品所在页面
+                    window.location.href=result;    //转至该类商品所在页面
                 },
                 error: function() {
                     alert("请求失败，请稍后重试！");

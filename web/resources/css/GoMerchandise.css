@@ -69,14 +69,14 @@ nav a{
 #top .logo{
 	width: 300px;
 	color: #8E32F8;
-	padding-top: 40px;
+	padding-top: 25px;
 	margin: 0 0 0 80px;
 	float: left;
 }
 #top .logo p{
 	margin: 0;
 	text-align: center;
-	font-size: 40px;
+	/*font-size: 40px;*/
 	font-family: "微软雅黑","Comic Sans MS","幼圆","黑体",sans-serif;
 }
 #top .search{
@@ -209,26 +209,26 @@ nav a{
 	font-family:"Comic Sans MS","微软雅黑","幼圆","黑体",sans-serif;
 }
 
-.adds{
+#footer .adds{
 	height: 20px;
 	width: 280px;
 	margin: 0 auto;
 }
 
-.add{
+#footer .add{
 	float: left;
 	padding: 0 20px 0 20px;
 	font-family:"微软雅黑","Comic Sans MS","幼圆","黑体",sans-serif;
 	font-size: 0.8em;
 }
-.front{
+#footer .front{
 	border-right: 1px solid #8E32F8;
 }
-.add a{
+#footer .add a{
 	text-decoration: none;
 	color: #8E32F8;
 }
-.add a:hover{
+#footer .add a:hover{
 	text-decoration: underline;
 	color: #2D56F6;
 }

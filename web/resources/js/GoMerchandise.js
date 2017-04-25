@@ -51,7 +51,21 @@ window.onload = function(){
 			box.className = "pro";
 			parent.appendChild(box);
 			var img = document.createElement('img');
-			var folder = parent.id;
+			var folder = "";
+			if(parent.id === "all"){
+				var div = document.getElementsByClassName('images tab-pane');
+				// console.log(div);
+				var index = parseInt(Math.random()*div.length);
+				// console.log(index);
+				if(index === 0){
+					index += 1;
+				}
+				folder = div[index].id;
+			}
+			else{
+				folder = parent.id;
+			}
+			console.log(folder);
 			img.src = "../resources/Images/"+folder+"/"+k+".jpg";
 			box.appendChild(img);
 			var p1 = document.createElement('p');

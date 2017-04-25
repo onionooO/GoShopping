@@ -44,14 +44,15 @@ window.onload = function(){
 		// 		pros: pros
 		// 	}
 		// })
-		for(var i=20;i>8;i--){
+		for(var i=12;i>0;i--){
+			var k = parseInt(Math.random()*33+1);
 			var parent = document.getElementsByClassName('tab-pane active')[0];
 			var box = document.createElement('div');
 			box.className = "pro";
 			parent.appendChild(box);
 			var img = document.createElement('img');
 			var folder = parent.id;
-			img.src = "../resources/Images/"+folder+"/"+i+".jpg";
+			img.src = "../resources/Images/"+folder+"/"+k+".jpg";
 			box.appendChild(img);
 			var p1 = document.createElement('p');
 			p1.className = "description add";

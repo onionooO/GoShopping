@@ -2,6 +2,7 @@ package com.hsy.utils;
 
 import java.lang.reflect.InvocationTargetException;
 import java.lang.reflect.Method;
+import java.util.Enumeration;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
@@ -9,7 +10,7 @@ import javax.servlet.http.HttpServletResponse;
 import com.hsy.base.BaseService;
 import com.hsy.beanFactory.BeanFactory;
 import com.hsy.service.CommodityService;
-import com.hsy.service.DetailService;
+import com.hsy.service.OrderDetailService;
 import com.hsy.service.ShoppingCartService;
 import com.hsy.service.UserService;
 
@@ -24,7 +25,7 @@ public class ServiceHandel {
 
 	private static UserService userService = BeanFactory.getInstance(UserService.class);
 	private static CommodityService commodityService = BeanFactory.getInstance(CommodityService.class);
-	private static DetailService detailService = BeanFactory.getInstance(DetailService.class);
+	private static OrderDetailService orderDetailService = BeanFactory.getInstance(OrderDetailService.class);
 	private static ShoppingCartService shoppingCartService = BeanFactory.getInstance(ShoppingCartService.class);
 
 	/**
@@ -36,10 +37,6 @@ public class ServiceHandel {
 	 */
 	public static String ServiceHandel(HttpServletRequest request, HttpServletResponse response) {
 		
-//		String dataReq=request.getParameter("data");
-//		JSONObject jsonObject=JSONObject.fromObject(dataReq);
-//		String methodName = jsonObject.getString("method");
-//		String serviceName=jsonObject.getString("service");
 		String methodName=request.getParameter("method");
 		String serviceName=request.getParameter("service");
 		BaseService baseService =getService(serviceName);
@@ -78,7 +75,7 @@ public class ServiceHandel {
 		} else if (serviceName.equals("commodityService")) {
 			baseService = commodityService;
 		} else if (serviceName.equals("detailService")) {
-			baseService = detailService;
+			baseService = orderDetailService;
 		} else if (serviceName.equals("shoppingCartService")) {
 			baseService = shoppingCartService;
 		}

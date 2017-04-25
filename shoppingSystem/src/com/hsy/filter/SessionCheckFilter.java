@@ -12,6 +12,8 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
+import net.sf.json.JSONObject;
+
 /**
  * 验证用户的权限
  * 
@@ -22,8 +24,6 @@ public class SessionCheckFilter implements Filter {
 
 	private FilterConfig fConfig;
 	private String redirectURL;
-	private String loginPage;
-	private String registerPage;
 
 	public void doFilter(ServletRequest request, ServletResponse response, FilterChain chain)
 			throws IOException, ServletException {
@@ -37,12 +37,12 @@ public class SessionCheckFilter implements Filter {
 		String contextPath = httpRequest.getContextPath();
 		String uri = url.substring(contextPath.length(), url.length());
 		// 如果请求不是是来自登录页面和注册页面
-		String method = httpRequest.getParameter("method");
+		String method=httpRequest.getParameter("method");
 		
 		if (method != null && !method.equals("login") && !method.equals("register")){
 
 			// 如果用户请求的既不是登录页面也不是注册的页面
-			if (!uri.equals(loginPage) && !uri.equals(registerPage)) {
+			if (!uri.equals(redirectURL)) {
 
 				// 检验用户是否登录过
 				String username = null;
@@ -61,8 +61,6 @@ public class SessionCheckFilter implements Filter {
 	 */
 	public void init(FilterConfig fConfig) throws ServletException {
 		this.fConfig = fConfig;
-		loginPage = fConfig.getInitParameter("loginPage");
-		registerPage = fConfig.getInitParameter("register");
 		redirectURL = fConfig.getInitParameter("redirectURL");
 	}
 

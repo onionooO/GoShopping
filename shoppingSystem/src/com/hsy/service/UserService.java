@@ -9,11 +9,11 @@ import javax.servlet.http.HttpSession;
 
 import com.hsy.base.BaseService;
 import com.hsy.beanFactory.BeanFactory;
+import com.hsy.dao.UserDao;
 import com.hsy.daoImp.UserDaoImp;
 import com.hsy.entity.User;
 
 import net.sf.json.JSONObject;
-import net.sf.json.JSONString;
 
 /**
  * 操作user的事务
@@ -23,7 +23,8 @@ import net.sf.json.JSONString;
  */
 public class UserService implements BaseService{
 
-	private UserDaoImp userDao =BeanFactory.getInstance(UserDaoImp.class); 
+	private UserDao userDao =BeanFactory.getInstance(UserDaoImp.class); 
+	
 	/**
 	 * 验证用户
 	 * @param name
@@ -32,35 +33,26 @@ public class UserService implements BaseService{
 	 */
 	public String login(HttpServletRequest request,HttpServletResponse response) {
 		
-//		//获取前端传过来的数据
-//		String dataReq=request.getParameter("data");
-//		JSONObject jsonObject=JSONObject.fromObject(dataReq);
-//		String name =jsonObject.getString("username");
-//		String password =jsonObject.getString("password");
-//		User user = userDao.login(name);
-//		String dataRes=null;
-//		// 该用户不存在
-//		if (null == user) {
-//			dataRes="用户名错误";
-//		}
-//		// 该用户存在并且输入的密码不正确
-//		if (!user.getPassword().equals(password)) {
-//			dataRes="密码错误";
-//		}
-//		//如果用户输入的用户名和密码都正确，将用户名存进session
-//		HttpSession session=request.getSession();
-//		session.setAttribute("username",name);
-//		return dataRes;
+		//获取前端传过来的数据
+		String phone =request.getParameter("phone");
+		String password =request.getParameter("password");
 		
-		String name=request.getParameter("username");
-		String password=request.getParameter("password");
-		String dataRes="登录失败";
-		if(name.equals("aaa")&&password.equals("aaa")){
-			dataRes="登录成功";
+		User user = userDao.login(phone);
+		String dataRes=null;
+		// 该用户不存在
+		if (null == user) {
+			dataRes="-1";
+			return dataRes;
 		}
-		//如果用户输入的用户名和密码都正确，将用户名存进session
+		// 该用户存在并且输入的密码不正确
+	    if (!user.getPassword().equals(password)) {
+			dataRes="0";
+			return dataRes;
+		}
+		//如果用户输入的用户名和密码都正确，将用户存进session
 		HttpSession session=request.getSession();
-		session.setAttribute("username",name);
+		session.setAttribute("user",user);
+		dataRes="1";
 		return dataRes;
 	}
 	/**
@@ -70,13 +62,53 @@ public class UserService implements BaseService{
 	 * @return
 	 */
 	public String register(HttpServletRequest request,HttpServletResponse response){
-//		String data=request.getParameter("data");
-//		JSONObject jsonObject=JSONObject.fromObject(data);
-//		jsonObject.put("userId",0);
-//		User user=(User) JSONObject.toBean(jsonObject,User.class);
-//		Boolean flag=userDao.insert(user);
-//		return flag.toString();
-		Boolean flag=true;
-		return flag.toString();
+		
+		//从前端获取数据
+		String username=request.getParameter("username");
+		String password=request.getParameter("password");
+		String phone=request.getParameter("phone");
+		//查询该手机号码是否已被注册
+		User user = userDao.login(phone);
+		//如果被注册
+		if(user!=null)
+			return "0";
+		
+	    user=new User(0, username, phone, password);
+		int flag=userDao.insert(user);
+		String dataRes=(flag>0)?"1":"0";
+		return dataRes;
+	}
+	/**
+	 * 更新用户的信息
+	 * @param request
+	 * @param response
+	 * @return
+	 */
+	public String updateUser(HttpServletRequest request,HttpServletResponse response){
+		
+		//从前端获取数据
+		String username=request.getParameter("username");
+		String password=request.getParameter("password");
+		String phone=request.getParameter("phone");
+		// 从session获取用户
+		HttpSession session = request.getSession();
+		User user = (User) session.getAttribute("user");
+		//判断用户是否修改绑定的手机号码
+		if(!user.getPhone().equals(phone)){
+			//判断修改的手机号是否被注册
+			User user2=userDao.login(phone);
+			if(user2!=null){
+				return "0";
+			}
+		}
+		user.setName(username);
+		user.setPassword(password);
+		user.setPhone(phone);
+		int flag=userDao.updateUser(user);
+		if(flag!=0){
+			session.setAttribute("user",user);
+		}
+		String dataRes=(flag>0)?"1":"0";
+		return dataRes;
 	}
 }

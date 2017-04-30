@@ -2,10 +2,16 @@ window.onload = function(){
 	$('nav .logo').on('click', function(){
 		window.location.href = "Gwy_home.html";
 	})
-	var data = {
-		data: $('input').val()
-	};
+	$('.signout').on('click',function(){
+		window.location.href="Gwy_home.html";
+	})
+	
+	//点击“搜索”
 	$('.searchbtn').on('click', function(){
+		var data = {
+			data: $('input#proText').val()
+		};
+		console.log(data);
 		$.ajax({
 			url:      '/path/to/file',
 			type:     'post',
@@ -75,10 +81,24 @@ window.onload = function(){
 			var p2 = document.createElement('p');
 			p2.className = "price add";
 			box.appendChild(p2);
-			$('p.price.add').text('￥59.99');
+			$('p.price.add').text('￥109.00');
+
+			//点击图片或文字说明跳转至商品详情页面
+			GoDetails();
 		}
 	})
+	//点击图片或文字说明跳转至商品详情页面
+	GoDetails();
 }
 function showMerchandise(src) {
 	
+}
+function GoDetails(){
+	//点击图片或文字说明跳转至商品详情页面
+	$('.pro img').on('click',function(){
+		window.location.href = "GoDetails.html";
+	})
+	$('.pro p.description').on('click',function(){
+		window.location.href = "GoDetails.html";
+	})
 }

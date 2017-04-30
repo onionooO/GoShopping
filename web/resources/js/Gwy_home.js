@@ -49,6 +49,7 @@ window.onload = function () {
                         $('#nav .sign').css('display','none');
                         $('#nav .sel').css('display','block');
                         $('#signBox').css('display','none');
+                        $('.navshow').css('display','block');
                         $('#content .showPro').css('display', 'block');
                         var contentH = document.getElementById('content').offsetHeight + 80;
                         $('#footer').css('margin-top', contentH);
@@ -66,6 +67,7 @@ window.onload = function () {
                     $('#nav .sign').css('display','none');
                     $('#nav .sel').css('display','block');
                     $('#signBox').css('display','none');
+                    $('.navshow').css('display','block');
                     $('#content .showPro').css('display', 'block');
                     var contentH = document.getElementById('content').offsetHeight + 80;
                     // console.log(contentH);
@@ -120,8 +122,17 @@ window.onload = function () {
                     alert("请求失败，请稍后重试！");
                 }
             })
-            
-            
+        })
+        //点击图片或文字说明跳转至商品详情页面
+        $('.pro img').on('click',function(){
+            window.location.href = "GoDetails.html";
+        })
+        $('.pro p.description').on('click',function(){
+            window.location.href = "GoDetails.html";
+        })
+            //点击“注销”之后
+            $('.signout').on('click', function(){
+            window.location.href="Gwy_home.html";
         })
     })
 }

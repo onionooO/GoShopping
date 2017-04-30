@@ -1,0 +1,99 @@
+#content{
+	width: 100%;
+	height: auto;
+	position: absolute;
+}
+#content .cart{
+	width: 70%;
+	height: auto;
+	margin: 20px auto;
+}
+table tr:not(.headtr){
+	width: 100%;
+	height: auto;
+	margin: 10px;
+	border-top: 1px solid #ddd;
+	border-bottom: 1px solid #ddd;
+}
+#content .cart th{
+	color: #8E32F8;
+	width: 15%;
+}
+td img{
+	width: 100px;
+	height: 100px;
+	margin: 10px auto;
+}
+td p{
+	text-align: center;
+}
+#content .cart .price{
+	text-align: center;
+	font-family: "Comic Sans MS","微软雅黑","幼圆","黑体",sans-serif;
+}
+#content .cart .amount div{
+	display: inline-block;
+	width: 30px;
+	height: 30px;
+	margin: 0;
+	border: 1px solid #ddd;
+}
+#content .cart .amount div.sub1{
+	pointer-events: none;
+    cursor: default;
+    opacity: 0.6;
+}
+#content .cart .amount div.sub2, .cart .amount div.add{
+	background-color: #ddd;
+	cursor: pointer;
+}
+#content .cart .amount div.cnt{
+	width: 60px;
+}
+#content .cart .amount div p{
+	color: #8E32F8;
+	font-size: 20px;
+	text-align: center;
+	margin: 0;
+}
+i.delete{
+	color: grey;
+	cursor: pointer;
+}
+i.delete:hover{
+	color: #8E32F8;
+}
+#content .settlement{
+	width: auto;
+	height: auto;
+	float: right;
+	margin: 20px 30px;
+}
+button.settle{
+	border-radius: 0;
+	width: 80px;
+	background-color: #ddd;
+}
+#settle{
+	position: absolute;
+	display: none;
+	margin: 40px auto;
+	border: 1px solid #8E32F8;
+	/*border-radius: 15px;*/
+	width: 350px;
+	height: auto;
+	background-color: white;
+	box-shadow: 0 5px 15px rgba(0,0,0,.5);
+}
+#settle p{
+	text-align: center;
+	color: #8E32F8;
+	font-size: 1.2em;
+}
+#settle div{
+	margin: 20px auto;
+	width: 60%;
+}
+.sui-btn.button,.sui-btn.submit{
+	margin-left: 26px;
+}

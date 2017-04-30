@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Go物缘商品详情</title>
+	<link rel="stylesheet" href="https://i.icomoon.io/public/temp/9f6c4c43bb/UntitledProject/style.css">
+	<link rel="stylesheet" type="text/css" href="http://g.alicdn.com/sj/dpl/1.5.1/css/sui.min.css">
+	<link rel="stylesheet" type="text/css" href="../resources/css/GoDetails.css">
+	<link rel="stylesheet" type="text/css" href="../resources/css/GoPublic.css">
+	<script type="text/javascript" src="https://unpkg.com/vue/dist/vue.js"></script>
+	<script type="text/javascript" src="../resources/js/jquery-3.1.1.min.js"></script>
+	<script type="text/javascript" src="http://g.alicdn.com/sj/dpl/1.5.1/js/sui.min.js"></script>
+	<script type="text/javascript" src="../resources/js/GoDetails.js"></script>
+</head>
+<body>
+	<nav id="header" class="navbar-fixed-top">
+		<div class="logo">
+			<p>Go</p>
+		</div>
+		<div id="navlist">
+            <ul class="oNav">
+                <li><a href="GoFemaleClothes.html">女装专区</a></li>
+                <li><a href="GoMaleClothes.html">男装专区</a></li>
+                <li><a href="GoFemaleShoes.html">女鞋专区</a></li>
+                <li><a href="GoMaleShoes.html">男鞋专区</a></li>
+                <li><a href="GoFlowers.html">鲜花专区</a></li>
+                <li><a href="GoSnack.html">零食专区</a></li>
+            </ul>
+        </div>
+        <div class="sel">
+        	<a href="GoCart.html"><i class="icon-cart"></i>我的购物车</a>
+        	<button type="button" class="sui-btn btn-primary signout">注销</button>
+        </div>
+	</nav>
+	<div id="top">
+		<div class="logo">
+			<p style="font-size:40px;">Go物缘</p>
+			<p style="font-size:28px;">www.gwy.com</p>
+		</div>
+		<div class="search">
+			<input type="text" name="search" id="proText">
+			<button type="button" class="sui-btn btn-primary searchbtn">搜索</button>
+		</div>
+	</div>
+	<div style="border: 1px solid #ddd;"></div>
+	<div id="content">
+		<div class="pro_show">
+			<div class="image">
+				<img src="../resources/Images/flower4.jpg" alt="图片无法显示">
+			</div>
+			<div class="choices">
+				<p class="description">这个花我知道这花是满天星 因为是我喜欢的 好好看</p>
+				<form class="sui-form form-horizontal">
+					<table>
+						<tr>
+							<td class="entry">价格</td>
+							<td class="price">￥199.00</td>
+						</tr>
+						<tr>
+							<td class="entry">配送</td>
+							<td class="address">
+								<span class="addr">广东省广州市</span> 配送到 
+								<select class="addr">
+									<option value="背景">北京</option>
+									<option value="广东">广东</option>
+									<option value="云南">云南</option>
+									<option value="湖南">湖南</option>
+									<option value="天津">天津</option>
+								</select>
+								<select class="addr">
+									<option value="广州">广州</option>
+									<option value="深圳">深圳</option>
+									<option value="汕头">汕头</option>
+									<option value="东莞">东莞</option>
+									<option value="佛山">佛山</option>
+								</select>
+							</td>
+						</tr>
+						<tr>
+							<td class="entry">尺寸</td>
+							<td class="size">
+								<input type="radio" name="size" value="S">S
+								<input type="radio" name="size" value="M">M
+								<input type="radio" name="size" value="L">L
+								<input type="radio" name="size" value="XL">XL
+							</td>
+						</tr>
+						<tr>
+							<td class="entry">颜色</td>
+							<td class="color">
+								<table>
+									<tr>
+										<td>
+											<input type="radio" name="color" value="S">白色
+											<input type="radio" name="color" value="M">红色
+											<input type="radio" name="color" value="L">蓝色
+											<input type="radio" name="color" value="XL">灰色
+										</td>
+									</tr>
+									<tr>
+										<td>
+											<input type="radio" name="color" value="S">黑色
+											<input type="radio" name="color" value="M">绿色
+											<input type="radio" name="color" value="L">紫色
+											<input type="radio" name="color" value="XL">卡其
+										</td>
+									</tr>
+								</table>
+							</td>
+						</tr>
+						<tr>
+							<td class="entry">数量</td>
+							<td id="amount" class="amount">
+								<div class="sub1" v-if="count <= 1" v-on:click="count -= 1"><p>-</p></div>
+								<div class="sub2" v-else v-on:click="count -= 1"><p>-</p></div>
+								<div class="cnt"><p>{{ count }}</p></div>
+								<div class="add" v-on:click="count += 1"><p>+</p></div>
+							</td>
+						</tr>
+					</table>
+					<div class="submit controls">	
+						<button type="button" class="sui-btn btn-primary signupbtn">立即购买</button>
+						<button type="button" class="sui-btn btn-primary button"><i class="icon-cart"></i>加入购物车</button>
+					</div>
+				</form>
+			</div>
+		</div>
+		<div class="details">
+			<div class="more">
+				<p>商 品 详 情</p>
+			</div>
+			<div class="images">
+				<img src="../resources/Images/flower4.jpg" alt="图片无法显示">
+			</div>
+			<div class="images">
+				<img src="../resources/Images/flower4.jpg" alt="图片无法显示">
+			</div>
+			<div class="images">
+				<img src="../resources/Images/flower4.jpg" alt="图片无法显示">
+			</div>
+			<div class="images">
+				<img src="../resources/Images/flower4.jpg" alt="图片无法显示">
+			</div>
+			<div class="images">
+				<img src="../resources/Images/flower4.jpg" alt="图片无法显示">
+			</div>
+		</div>
+	</div>
+	<!-- 页脚 -->
+	<div id="footer">
+		<div class="footer">
+			<p>Powered by &nbsp;&nbsp;&nbsp;Java课设<a href="Gwy_home.html" target="_blank" style="color:#8E32F8; cursor: pointer; text-decoration: underline;">Go物缘</a>小组</p>
+            <div class="adds">
+                <div class="add front">
+                    <a href="Gwy_home.html">网站首页</a>
+                </div>
+                <div class="add front">
+                    <a href="#">联系我们</a>
+                </div>
+                <div class="add">
+                    <a href="#">意见反馈</a>
+                </div>
+            </div>
+            <p>联系人：陈海堂&nbsp;&nbsp;黄舒梦&nbsp;&nbsp;黄仰纯&nbsp;&nbsp;&nbsp;联系方式：13416140866&nbsp;&nbsp;&nbsp;&nbsp;15800219218&nbsp;&nbsp;&nbsp;&nbsp;13416141219</p>
+            <p>邮箱：yangchun6868@163.com</p>
+            <p>地址：华南农业大学泰山区</p>
+		</div>
+	</div>
+</body>
+</html>

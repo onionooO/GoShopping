@@ -49,6 +49,7 @@ window.onload = function () {
                         $('#nav .sign').css('display','none');
                         $('#nav .sel').css('display','block');
                         $('#signBox').css('display','none');
+                        $('.navshow').css('display','block');
                         $('#content .showPro').css('display', 'block');
                         var contentH = document.getElementById('content').offsetHeight + 80;
                         $('#footer').css('margin-top', contentH);
@@ -61,15 +62,16 @@ window.onload = function () {
                     }
                 },
                 error: function(){
-                     alert("请求失败，请稍后重试！");
-//                    $('body').removeClass('set_position');
-//                    $('#nav .sign').css('display','none');
-//                    $('#nav .sel').css('display','block');
-//                    $('#signBox').css('display','none');
-//                    $('#content .showPro').css('display', 'block');
-//                    var contentH = document.getElementById('content').offsetHeight + 80;
-//                    // console.log(contentH);
-//                    $('#footer').css('margin-top', contentH);
+                    // alert("请求失败，请稍后重试！");
+                    $('body').removeClass('set_position');
+                    $('#nav .sign').css('display','none');
+                    $('#nav .sel').css('display','block');
+                    $('#signBox').css('display','none');
+                    $('.navshow').css('display','block');
+                    $('#content .showPro').css('display', 'block');
+                    var contentH = document.getElementById('content').offsetHeight + 80;
+                    // console.log(contentH);
+                    $('#footer').css('margin-top', contentH);
                 }
             })
         })
@@ -89,7 +91,7 @@ window.onload = function () {
                 data:     data,
                 dataType: 'json',
                 success:  function(result){
-                    if(result.status === 1){
+                    if(result === 1){
                         alert("注册成功！\n欢迎使用Go物缘，快来愉快购物吧~");
                         $('.sign #signinbtn').click();
                     }
@@ -108,10 +110,12 @@ window.onload = function () {
         $('.search .searchbtn').on('click',function(){
             var proText = $('#proText').val();
             var data = {
-                proText: proText
+                proText: proText,
+                service:  'CommodityService',
+                method:   'getAllCommodityByClassName'
             }
             $$.ajax({
-                url:      '/path/to/file',
+                url:      '/shoppingSystem/FrontController',
                 type:     'post',
                 dataType: 'json',
                 data:     data,
@@ -122,8 +126,17 @@ window.onload = function () {
                     alert("请求失败，请稍后重试！");
                 }
             })
-            
-            
+        })
+        //点击图片或文字说明跳转至商品详情页面
+        $('.pro img').on('click',function(){
+            window.location.href = "GoDetails.html";
+        })
+        $('.pro p.description').on('click',function(){
+            window.location.href = "GoDetails.html";
+        })
+            //点击“注销”之后
+            $('.signout').on('click', function(){
+            window.location.href="Gwy_home.html";
         })
     })
 }

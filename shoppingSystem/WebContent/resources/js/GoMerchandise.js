@@ -2,10 +2,16 @@ window.onload = function(){
 	$('nav .logo').on('click', function(){
 		window.location.href = "Gwy_home.html";
 	})
-	var data = {
-		data: $('input').val()
-	};
+	$('.signout').on('click',function(){
+		window.location.href="Gwy_home.html";
+	})
+	
+	//点击“搜索”
 	$('.searchbtn').on('click', function(){
+		var data = {
+			data: $('input#proText').val()
+		};
+		console.log(data);
 		$.ajax({
 			url:      '/path/to/file',
 			type:     'post',
@@ -44,14 +50,29 @@ window.onload = function(){
 		// 		pros: pros
 		// 	}
 		// })
-		for(var i=20;i>8;i--){
+		for(var i=12;i>0;i--){
+			var k = parseInt(Math.random()*33+1);
 			var parent = document.getElementsByClassName('tab-pane active')[0];
 			var box = document.createElement('div');
 			box.className = "pro";
 			parent.appendChild(box);
 			var img = document.createElement('img');
-			var folder = parent.id;
-			img.src = "../resources/Images/"+folder+"/"+i+".jpg";
+			var folder = "";
+			if(parent.id === "all"){
+				var div = document.getElementsByClassName('images tab-pane');
+				// console.log(div);
+				var index = parseInt(Math.random()*div.length);
+				// console.log(index);
+				if(index === 0){
+					index += 1;
+				}
+				folder = div[index].id;
+			}
+			else{
+				folder = parent.id;
+			}
+			console.log(folder);
+			img.src = "../resources/Images/"+folder+"/"+k+".jpg";
 			box.appendChild(img);
 			var p1 = document.createElement('p');
 			p1.className = "description add";
@@ -60,10 +81,24 @@ window.onload = function(){
 			var p2 = document.createElement('p');
 			p2.className = "price add";
 			box.appendChild(p2);
-			$('p.price.add').text('￥59.99');
+			$('p.price.add').text('￥109.00');
+
+			//点击图片或文字说明跳转至商品详情页面
+			GoDetails();
 		}
 	})
+	//点击图片或文字说明跳转至商品详情页面
+	GoDetails();
 }
 function showMerchandise(src) {
 	
+}
+function GoDetails(){
+	//点击图片或文字说明跳转至商品详情页面
+	$('.pro img').on('click',function(){
+		window.location.href = "GoDetails.html";
+	})
+	$('.pro p.description').on('click',function(){
+		window.location.href = "GoDetails.html";
+	})
 }

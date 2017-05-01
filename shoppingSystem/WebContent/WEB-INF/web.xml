@@ -8,7 +8,7 @@
 	<!-- 配置编码的过滤器 -->
 	<filter>
 		<filter-name>EncodingFilter</filter-name>
-		<filter-class>com.hsy.filter.EncodingFilter</filter-class>
+		<filter-class>com.gwy.filter.EncodingFilter</filter-class>
 		<init-param>
 			<param-name>charset</param-name>
 			<param-value>UTF-8</param-value>
@@ -17,10 +17,10 @@
 	<!-- 配置判断用户权限的过滤器 -->
 	<filter>
 		<filter-name>SessionCheckFilter</filter-name>
-		<filter-class>com.hsy.filter.SessionCheckFilter</filter-class>
+		<filter-class>com.gwy.filter.SessionCheckFilter</filter-class>
 		<init-param>
 			<param-name>redirectURL</param-name>
-			<param-value>/Go.html</param-value>
+			<param-value>html/Gwy_home.html</param-value>
 		</init-param>
 	</filter>
 	<!-- 配置EncodingFilter过滤器拦截的url -->
@@ -35,6 +35,8 @@
 	</filter-mapping>
 	
 	<welcome-file-list>
+		<welcome-file>html/Gwy_home.html</welcome-file>
 		<welcome-file>/html/Gwy_home.html</welcome-file>
+		<welcome-file>../html/Gwy_home.html</welcome-file>
 	</welcome-file-list>
 </web-app>

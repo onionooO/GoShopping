@@ -1,0 +1,128 @@
+#content{
+	width: 100%;
+	height: auto;
+	margin: 0;
+}
+#content .pro_show{
+	width: 80%;
+	height: auto;
+	margin: 10px auto;
+
+}
+#content .pro_show .image{
+	width: 40%;
+	margin: 10px;
+	border: 1px solid #8E32F8;
+	box-shadow: 0 0 5px #8E32F8;
+	float: left;
+}
+#content .pro_show .choices{
+	display: inline-block;
+	width: 50%;
+	margin: 10px 0 0 30px;
+}
+#content p.description{
+	display: inline-block;
+	margin: 0;
+	font-size: 1.2em;
+}
+#content .choices .sui-form{
+	font-size: 1em;
+	line-height: normal;
+}
+#content .choices tr{
+	display: block;
+	margin: 10px;
+}
+#content .choices .entry{
+	padding:10px 20px 10px 10px;
+}
+#content .choices .price{
+	font-size: 1.3em;
+	color: #8E32F8;
+	font-family: "Comic Sans MS","微软雅黑","幼圆","黑体",sans-serif;
+}
+#content .choices .addr{
+	font-size: 0.95em;
+}
+select{
+	border: 1px solid #8E32F8;
+	outline: none;
+}
+#content .choices .size input{
+	margin: 0 8px 0 20px;
+	background-color: #FAFAFA;
+}
+#content .choices .color table{
+	display: inline-block;
+
+}
+#content .choices .color input{
+	margin: 0 8px 0 10px;
+}
+#content .choices .amount div{
+	display: inline-block;
+	width: 30px;
+	height: 30px;
+	margin: 0;
+	border: 1px solid #ddd;
+}
+#content .choices .amount div.sub1{
+	pointer-events: none;
+    cursor: default;
+    opacity: 0.6;
+}
+#content .choices .amount div.sub2, .choices .amount div.add{
+	background-color: #ddd;
+	cursor: pointer;
+}
+#content .choices .amount div.cnt{
+	width: 60px;
+}
+#content .choices .amount div p{
+	color: #8E32F8;
+	font-size: 20px;
+	text-align: center;
+	margin: 0;
+}
+#content .choices .submit{
+	display: inline-block;
+	margin: 30px 0 0 40px;
+}
+.sui-btn{
+	font-size: 1em;
+	height: 35px;
+	border: 1px solid #8E32F8;
+	border-radius: 20px;
+	color: #8E32F8;
+	background-color: white;
+}
+.sui-btn:hover{
+	border: 1px solid #8E32F8;
+	color: #8E32F8;
+	background-color: #FAFAFA;
+}
+.sui-btn.button{
+	margin-left: 50px;
+	background-color: #ddd;
+}
+#content .more{
+	margin: 30px 0;
+	width: 100%;
+	height: 50px;
+	background-color: white;
+}
+
+#content .more p{
+	margin: 0;
+	padding: 12px 0;
+	color: #8E32F8;
+	text-align: center;
+	font-size: 1.2em;
+}
+#content .details .images{
+	width: 40%;
+	margin: 10px auto;
+	border: 1px solid #8E32F8;
+	box-shadow: 0 0 5px #8E32F8;
+}

@@ -85,11 +85,11 @@ window.onload = function () {
         })
         //注册时点击“注册”按钮
         $('.signupbtn').on('click',function(){
-            var phone = $('#inputPhone').val();
-            var username = $('#inputUsername').val();
-            var password = $('#inputPassword').val();
+            var phone = $('#inputPhone2').val();
+            var username = $('#inputUsername2').val();
+            var password = $('#inputPassword2').val();
             var again = $('#inputPwAgain').val();
-            if (phone != again) {
+            if (password != again) {
                 alert("两次输入密码不一致！");
             }
             else{
@@ -108,7 +108,10 @@ window.onload = function () {
                     success:  function(result){
                         if(result === 1){
                             alert("注册成功！\n欢迎使用Go物缘，快来愉快购物吧~");
-                            $('.sign #signinbtn').click();
+                            $('.signup').removeClass('active');
+                            $('.signin').addClass('active');
+                            $('#signup').removeClass('active');
+                            $('#signin').addClass('active');
                         }
                         else if(result === -1){
                             alert("该手机号已被注册！");
@@ -118,9 +121,14 @@ window.onload = function () {
                         }
                     },
                     error: function(){
-                        alert("请求失败，请稍后重试！");
+                        // alert("请求失败，请稍后重试！");
                         // alert("注册成功！\n欢迎使用Go物缘，快来愉快购物吧~");
                         // $('.sign #signinbtn').click();
+                        $('.signup').removeClass('active');
+                        $('.signin').addClass('active');
+                        $('#signup').removeClass('active');
+                        $('#signin').addClass('active');
+
                     }
                 })
             }
@@ -139,7 +147,7 @@ window.onload = function () {
                 dataType: 'json',
                 data:     data,
                 success: function(result){
-                    window.location.href=result;    //转至该类商品所在页面
+                    window.location.href="GoResult.html";    //转至该类商品所在页面
                 },
                 error: function() {
                     alert("请求失败，请稍后重试！");
@@ -153,9 +161,9 @@ window.onload = function () {
         $('.pro p.description').on('click',function(){
             window.location.href = "GoDetails.html";
         })
-            //点击“注销”之后
-            $('.signout').on('click', function(){
-            window.location.href="Gwy_home.html";
+        //点击“注销”之后
+        $('.signout').on('click', function(){
+        window.location.href="Gwy_home.html";
         })
     })
 }

@@ -2,6 +2,7 @@
 	width: 100%;
 	height: auto;
 	margin: 0;
+	position: absolute;
 }
 #content .pro_show{
 	width: 80%;
@@ -125,4 +126,24 @@ select{
 	margin: 10px auto;
 	border: 1px solid #8E32F8;
 	box-shadow: 0 0 5px #8E32F8;
+}
+#settle{
+	position: absolute;
+	display: none;
+	margin: 40px auto;
+	border: 1px solid #8E32F8;
+	/*border-radius: 15px;*/
+	width: 350px;
+	height: auto;
+	background-color: white;
+	box-shadow: 0 5px 15px rgba(0,0,0,.5);
+}
+#settle p{
+	text-align: center;
+	color: #8E32F8;
+	font-size: 1.2em;
+}
+#settle div{
+	margin: 20px auto;
+	width: 60%;
 }

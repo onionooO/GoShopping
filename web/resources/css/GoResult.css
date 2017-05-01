@@ -1,0 +1,52 @@
+#content{
+	width: 100%;
+	height: auto;
+	border-top: 2px solid #ddd;
+}
+#content .images{
+	width: 80%;
+	height: auto;
+	margin: 20px auto;
+}
+#content .pro{
+	width: 247px;
+	height: 360px;
+	float: left;
+	margin: 20px 10px;
+	border: 1px solid #FAFAFA;
+	background-color: white;
+	border-radius: 5px;
+	box-shadow: 0 0 5px #8E32F8;
+	font-family:"Comic Sans MS","微软雅黑","幼圆","黑体",sans-serif;
+}
+#content .pro:hover{
+	border: 1px solid #8E32F8;
+}
+#content .pro img{
+	width: 230px;
+	height: 220px;
+	margin: 10px 8px;
+	cursor: pointer;
+	border: 1px solid #FAFAFA;
+}
+#content .pro .description{
+	margin: 0;
+	padding: 10px 20px;
+	color: black;
+	text-align: center;
+	cursor: pointer;
+}
+#content .pro .description:hover{
+	color: #8E32F8;
+	text-decoration: underline;
+}
+#content .pro .price{
+	margin: 0;
+	padding: 10px;
+	text-align: center;
+	color: #8E32F8;
+	font-size: 1.2em;
+}
+.clear{
+	clear: both;
+}

@@ -57,7 +57,7 @@ window.onload = function(){
 	//结算时点击“确认”
 	$('button.submit').on('click',function(){
 		alert('支付成功！');
-		window.location.href="GoCart.html";
+		location.reload();
 	})
 	//结算时点击“取消”
 	$('button.button').on('click',function(){

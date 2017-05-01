@@ -2,7 +2,7 @@ window.onload = function(){
 	var bodyW = document.getElementsByTagName('body')[0].offsetWidth;
 	console.log(bodyW);
     $('#settle').css('margin-left', (bodyW-354)/2 + 'px');
-    var contentH = document.getElementById('content').offsetHeight;
+    var contentH = document.getElementById('content').offsetHeight+20;
     // console.log(contentH);
     $('#footer').css('margin-top', contentH);
 

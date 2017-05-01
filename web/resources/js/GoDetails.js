@@ -31,4 +31,10 @@ window.onload = function(){
 			count: 1
 		}
 	})
+
+	//点击“加入购物车”
+	$('button.button').on('click', function(event) {
+		event.preventDefault();
+		
+	});
 }

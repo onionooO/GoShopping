@@ -30,10 +30,10 @@ window.onload = function () {
         })
         //填完信息点击“登录”按钮
         $('.signinbtn').on('click',function(){
-            var username = $('#inputUsername').val();
+            var phone = $('#inputPhone').val();
             var password = $('#inputPassword').val();
             var data = {
-                phone: username,
+                phone: phone,
                 password: password,
                 service:  'userService',
                 method:   'login'
@@ -77,9 +77,11 @@ window.onload = function () {
         })
         //注册时点击“注册”按钮
         $('.signupbtn').on('click',function(){
+            var phone = $('#inputPhone').val();
             var username = $('#inputUsername').val();
             var password = $('#inputPassword').val();
             var data = {
+                phone: phone,
                 username: username,
                 password: password,
                 service:  'userService',

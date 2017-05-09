@@ -3,13 +3,19 @@
 <head>
 	<meta charset="utf-8">
 	<title>Go物缘</title>
-	<link rel="stylesheet" href="https://i.icomoon.io/public/temp/9f6c4c43bb/UntitledProject/style.css">
-	<link rel="stylesheet" type="text/css" href="http://g.alicdn.com/sj/dpl/1.5.1/css/sui.min.css">
-	<link rel="stylesheet" type="text/css" href="http://g.alicdn.com/sj/dpl/1.5.1/css/sui-append.css">
+	<!-- <link rel="stylesheet" href="https://i.icomoon.io/public/temp/9f6c4c43bb/UntitledProject/style.css"> -->
+	<link rel="stylesheet" type="text/css" href="../resources/icomoon/style.css">
+	<link rel="stylesheet" type="text/css" href="../resources/icomoon/demo-files/demo.css">
+	<!-- <link rel="stylesheet" type="text/css" href="http://g.alicdn.com/sj/dpl/1.5.1/css/sui.min.css"> -->
+	<!-- <link rel="stylesheet" type="text/css" href="http://g.alicdn.com/sj/dpl/1.5.1/css/sui-append.css"> -->
+	<link rel="stylesheet" type="text/css" href="../resources/.package/css/sui-append.css">
+	<link rel="stylesheet" type="text/css" href="../resources/.package/css/sui-all.min.css">
 	<link rel="stylesheet" type="text/css" href="../resources/css/GoPublic.css">
 	<link rel="stylesheet" type="text/css" href="../resources/css/Gwy_home.css">
 	<script type="text/javascript" src="../resources/js/jquery-3.1.1.min.js"></script>
-	<script type="text/javascript" src="http://g.alicdn.com/sj/dpl/1.5.1/js/sui.min.js"></script>
+	<script type="text/javascript" src="../resources/icomoon/demo-files/demo.js"></script>
+	<!-- <script type="text/javascript" src="http://g.alicdn.com/sj/dpl/1.5.1/js/sui.min.js"></script> -->
+	<script type="text/javascript" src="../resources/.package/js/sui.min.js"></script>
 	<script type="text/javascript" src="../resources/js/Gwy_home.js"></script>
 </head>
 <body>
@@ -264,78 +270,80 @@
 	</div>
 	<!-- 登录注册页面 -->
 	<div id="signBox">
-		<ul class="tab sui-nav nav-tabs">
-			<li class="signin active"><a href="#signin" data-toggle="tab" style="border-top-left-radius:16px;"><span>登录</span></a></li>
-			<li class="signup"><a href="#signup" data-toggle="tab" style="border-top-right-radius:16px;"><span>注册</span></a></li>
-		</ul>
-		<div class="tab-content">
-			<div id="signin" class="tab-pane active">
-				<form class="sui-form form-horizontal">
-					<div class="control-group">
-						<label for="inputPhone" class="control-label">手机号：</label>
-						<div class="controls">
-							<input type="text" id="inputPhone" placeholder="Phone">
+		<div class="signBox">
+			<ul class="tab sui-nav nav-tabs">
+				<li class="signin active"><a href="#signin" data-toggle="tab" style="border-top-left-radius:16px;"><span>登录</span></a></li>
+				<li class="signup"><a href="#signup" data-toggle="tab" style="border-top-right-radius:16px;"><span>注册</span></a></li>
+			</ul>
+			<div class="tab-content">
+				<div id="signin" class="tab-pane active">
+					<form class="sui-form form-horizontal">
+						<div class="control-group">
+							<label for="inputPhone" class="control-label">手机号：</label>
+							<div class="controls">
+								<input type="text" id="inputPhone" placeholder="Phone">
+							</div>
 						</div>
-					</div>
-					<div class="control-group">
-						<label for="inputPassword" class="control-label">密码：</label>
-						<div class="controls">
-							<input type="password" id="inputPassword" placeholder="Password">
+						<div class="control-group">
+							<label for="inputPassword" class="control-label">密码：</label>
+							<div class="controls">
+								<input type="password" id="inputPassword" placeholder="Password">
+							</div>
 						</div>
-					</div>
-					<div class="control-group">
-						<label class="control-label"></label>
-						<div class="controls">
-							<label data-toggle="checkbox" class="checkbox-pretty inline">
-								<input type="checkbox" name="remember-me" id="remember"><span>记住我</span>
-							</label>
+						<div class="control-group">
+							<label class="control-label"></label>
+							<div class="controls">
+								<label data-toggle="checkbox" class="checkbox-pretty inline">
+									<input type="checkbox" name="remember-me" id="remember"><span>记住我</span>
+								</label>
+							</div>
 						</div>
-					</div>
-					<div class="control-group">
-						<label class="control-label"></label>
-						<div class="controls">
-							<button type="button" class="sui-btn btn-primary signinbtn">登录</button>
-							<button type="button" class="sui-btn btn-primary button">取消</button>
+						<div class="control-group">
+							<label class="control-label"></label>
+							<div class="controls">
+								<button type="button" class="sui-btn btn-primary signinbtn">登录</button>
+								<button type="button" class="sui-btn btn-primary button">取消</button>
+							</div>
 						</div>
-					</div>
-				</form>
-				<p>还没有账号？点击<a class="clickhere">这里</a>注册</p>
-			</div>
-			<div id="signup" class="tab-pane">
-				<form class="sui-form form-horizontal">
-					<div class="control-group">
-						<label for="inputPhone" class="control-label">手机号：</label>
-						<div class="controls">
-							<input type="text" id="inputPhone2" placeholder="Username">
+					</form>
+					<p>还没有账号？点击<a class="clickhere">这里</a>注册</p>
+				</div>
+				<div id="signup" class="tab-pane">
+					<form class="sui-form form-horizontal">
+						<div class="control-group">
+							<label for="inputPhone" class="control-label">手机号：</label>
+							<div class="controls">
+								<input type="text" id="inputPhone2" placeholder="Username">
+							</div>
 						</div>
-					</div>
-					<div class="control-group">
-						<label for="inputName" class="control-label">用户名：</label>
-						<div class="controls">
-							<input type="text" id="inputUsername2" placeholder="Username">
+						<div class="control-group">
+							<label for="inputName" class="control-label">用户名：</label>
+							<div class="controls">
+								<input type="text" id="inputUsername2" placeholder="Username">
+							</div>
 						</div>
-					</div>
-					<div class="control-group">
-						<label for="inputPassword" class="control-label">密码：</label>
-						<div class="controls">
-							<input type="password" id="inputPassword2" placeholder="Password">
+						<div class="control-group">
+							<label for="inputPassword" class="control-label">密码：</label>
+							<div class="controls">
+								<input type="password" id="inputPassword2" placeholder="Password">
+							</div>
 						</div>
-					</div>
-					<div class="control-group">
-						<label for="inputPassword" class="control-label">确认密码：</label>
-						<div class="controls">
-							<input type="password" id="inputPwAgain" placeholder="Password">
+						<div class="control-group">
+							<label for="inputPassword" class="control-label">确认密码：</label>
+							<div class="controls">
+								<input type="password" id="inputPwAgain" placeholder="Password">
+							</div>
 						</div>
-					</div>
-					<div class="control-group">
-						<label class="control-label"></label>
-						<div class="controls">
-							<button type="button" class="sui-btn btn-primary signupbtn">注册</button>
-							<button type="button" class="sui-btn btn-primary button">取消</button>
+						<div class="control-group">
+							<label class="control-label"></label>
+							<div class="controls">
+								<button type="button" class="sui-btn btn-primary signupbtn">注册</button>
+								<button type="button" class="sui-btn btn-primary button">取消</button>
+							</div>
 						</div>
-					</div>
-				</form>
-				<p>快来加入Go物缘一起愉快购物吧~</p>
+					</form>
+					<p>快来加入Go物缘一起愉快购物吧~</p>
+				</div>
 			</div>
 		</div>
 	</div>

@@ -28,6 +28,18 @@ ul.entry li{
 .clear{
 	clear: both;
 }
+.empty{
+	display: none;
+	width: 100%;
+	height: auto;
+	border: 1px solid #ddd;
+	margin-bottom: 10px;
+}
+.empty p{
+	text-align: center;
+	font-size: 16px;
+	color: #8E32F8;
+}
 table tr{
 	width: 100%;
 	height: auto;

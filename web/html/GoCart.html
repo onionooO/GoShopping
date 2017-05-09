@@ -3,13 +3,19 @@
 <head>
 	<meta charset="utf-8">
 	<title>Go物缘-购物车</title>
-	<link rel="stylesheet" href="https://i.icomoon.io/public/temp/9f6c4c43bb/UntitledProject/style.css">
-	<link rel="stylesheet" type="text/css" href="http://g.alicdn.com/sj/dpl/1.5.1/css/sui.min.css">
+	<!-- <link rel="stylesheet" href="https://i.icomoon.io/public/temp/663f4cd7f5/UntitledProject/style.css"> -->
+	<link rel="stylesheet" type="text/css" href="../resources/icomoon/style.css">
+	<link rel="stylesheet" type="text/css" href="../resources/icomoon/demo-files/demo.css">
+	<!-- <link rel="stylesheet" type="text/css" href="http://g.alicdn.com/sj/dpl/1.5.1/css/sui.min.css"> -->
+	<link rel="stylesheet" type="text/css" href="../resources/.package/css/sui-append.css">
+	<link rel="stylesheet" type="text/css" href="../resources/.package/css/sui-all.min.css">
 	<link rel="stylesheet" type="text/css" href="../resources/css/GoCart.css">
 	<link rel="stylesheet" type="text/css" href="../resources/css/GoPublic.css">
 	<script type="text/javascript" src="https://unpkg.com/vue/dist/vue.js"></script>
 	<script type="text/javascript" src="../resources/js/jquery-3.1.1.min.js"></script>
-	<script type="text/javascript" src="http://g.alicdn.com/sj/dpl/1.5.1/js/sui.min.js"></script>
+	<script type="text/javascript" src="../resources/icomoon/demo-files/demo.js"></script>
+	<!-- <script type="text/javascript" src="http://g.alicdn.com/sj/dpl/1.5.1/js/sui.min.js"></script> -->
+	<script type="text/javascript" src="../resources/.package/js/sui.min.js"></script>
 	<script type="text/javascript" src="../resources/js/GoCart.js"></script>
 </head>
 <body>
@@ -53,6 +59,7 @@
 				<li>操作</li>
 			</ul>
 			<div class="clear"></div>
+			<div class="empty"><p>购物车为空</p></div>
 			<table id="v_app">
 				<tbody>
 					<tr>
@@ -66,7 +73,7 @@
 						<td>
 							<p class="price">￥109.00</p>
 						</td>
-						<td  class="amount">
+						<td  class="amount" id="app1">
 							<p>1</p>
 							<!-- <div class="sub1" v-if="count <= 1" v-on:click="count -= 1"><p>-</p></div>
 							<div class="sub2" v-else v-on:click="count -= 1"><p>-</p></div>
@@ -76,7 +83,7 @@
 							<div class="add" v-on:click="count += 1"><p>+</p></div> -->
 						</td>
 						<td>
-							<p id="sum"></p>
+							<p id="sum">￥109.00</p>
 						</td>
 						<td>
 							<p><i class="icon-bin delete"></i></p>
@@ -85,15 +92,15 @@
 					<tr>
 						<td>
 							<input type="checkbox" name="image">
-							<img src="../resources/Images/flower4.jpg" alt="图片无法显示">
+							<img src="../resources/Images/cw2.jpg" alt="图片无法显示">
 						</td>
 						<td class="description">
-							<p>这个花我知道这花是满天星 因为是我喜欢的 好好看</p>
+							<p>2017夏季新款女装 气质长裙</p>
 						</td>
 						<td>
-							<p class="price">￥199.00</p>
+							<p class="price">￥168.00</p>
 						</td>
-						<td  class="amount">
+						<td  class="amount" id="app2">
 							<p>1</p>
 							<!-- <div class="sub1" v-if="count <= 1" v-on:click="count -= 1"><p>-</p></div>
 							<div class="sub2" v-else v-on:click="count -= 1"><p>-</p></div>
@@ -103,7 +110,7 @@
 							<div class="add" v-on:click="count += 1"><p>+</p></div> -->
 						</td>
 						<td>
-							<p id="sum"></p>
+							<p id="sum">￥168.00</p>
 						</td>
 						<td>
 							<p><i class="icon-bin delete"></i></p>

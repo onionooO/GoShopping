@@ -1,3 +1,9 @@
+/*
+ * author: 黄仰纯
+ * 未经允许不得私自直接使用
+ * 有问题请联系：QQ：951813006；  WeChat：13416141219；  email：yangchun6868@163.com
+ */
+
 window.onload = function(){
 	var bodyW = document.getElementsByTagName('body')[0].offsetWidth;
 	// console.log(bodyW);
@@ -107,8 +113,8 @@ window.onload = function(){
 					alert("已成功加入购物车！");
 				},
 				error:    function(result) {
-					alert('服务器繁忙，请稍后重试！');
-					// alert("已成功加入购物车！");
+					// alert('服务器繁忙，请稍后重试！');
+					alert("已成功加入购物车！");
 				}
 			})
 		}

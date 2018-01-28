@@ -12,11 +12,15 @@ body{
 	font-size: 1em;
 	line-height: normal;
 	background-color: #FAFAFA;
-	background-image: url(../Images/bg.png); 
+	background-image: url(../Images/bg.png);
 	font-family: "微软雅黑","Comic Sans MS","幼圆","黑体",sans-serif;
 }
 .set_position{
 	position: fixed;
+}
+body a:hover{
+	text-decoration: none !important;
+	box-shadow: none !important;
 }
 nav{
 	width: 100%;
